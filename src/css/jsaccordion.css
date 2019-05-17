@@ -1,0 +1,13 @@
+.jsac-container > .jsac-list > .jsac-list-item > .jsac-body {
+    -webkit-transition: height 1s;
+    transition: height 500ms;
+    overflow: auto;
+}
+
+.jsac-container > .jsac-list > .jsac-list-item {
+    overflow: hidden;
+}
+
+.jsac-container > .jsac-list > .jsac-list-item:not(.expanded) > .jsac-body {
+    height: 0!important;
+}

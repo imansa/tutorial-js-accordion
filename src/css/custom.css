@@ -1,0 +1,6 @@
+.jsac-container.red-collpased > ul.jsac-list > li.jsac-list-item.collapsed > div.jsac-header h3,
+.jsac-container.red-collpased > ul.jsac-list > li.jsac-list-item.collapsed > div.jsac-header h4,
+.jsac-container.red-collpased > ul.jsac-list > li.jsac-list-item.collapsed > div.jsac-header h5,
+.jsac-container.red-collpased > ul.jsac-list > li.jsac-list-item.collapsed > div.jsac-header h6 {
+    color: red;
+}

@@ -2,24 +2,125 @@
 <html>
 <head>
 	<link href="css/jsaccordion.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 	<script src="./js/jsaccordion.js"></script>
 </head>
 <body>
-	<div id="test1">new object by selector then test it</div>
-	<div id="test2">new object by dom element then test</div>
-	<div id="test3">direct call by selector then test immediately</div>
-	<div id="test4">direct call and did not keep result then test immediately</div>
+	<div id="first-accordion" >
+		<ul>
+			<li>
+				<div>
+					<span class="status-icon"></span>
+					<h3>section #1 title</h3>
+				</div>
+				<div>
+					<p>multi line text can put here<br>
+						it is not only for us. lorem ipsum dollor amore. or other text here<br>
+						i am here
+					</p>
+					<p>another paragraph can set here<br>
+						it is multiline text<br>
+						no problem.
+					</p>
+				</div>
+			</li>
+			<li class="expanded">
+				<div>
+					<span class="status-icon"></span>
+					<h3>section #2 title</h3>
+				</div>
+				<div>
+                    <div id="third-accordion" >
+                        <ul>
+                            <li>
+                                <div>
+                                    <span class="status-icon"></span>
+                                    <h3>section #2-1 title</h3>
+                                </div>
+                                <div>
+                                    <p>multi line text can put here<br>
+                                        it is not only for us. lorem ipsum dollor amore. or other text here<br>
+                                        i am here
+                                    </p>
+                                    <p>another paragraph can set here<br>
+                                        it is multiline text<br>
+                                        no problem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="expanded">
+                                <div>
+                                    <span class="status-icon"></span>
+                                    <h3>section #2-2 title</h3>
+                                </div>
+                                <div>
+                                    <p>multi line text can put here<br>
+                                        it is not only for us. lorem ipsum dollor amore. or other text here<br>
+                                        i am here
+                                    </p>
+                                    <p>another paragraph can set here<br>
+                                        it is multiline text<br>
+                                        no problem.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<p>
+	seperate two accordions<br>
+	not any more
+	</p>
+    <div id="second-accordion" class="red-collpased">
+        <ul>
+            <li class="expanded">
+                <div>
+                    <span class="status-icon"></span>
+                    <h4>section #1 title</h4>
+                </div>
+                <div>
+                    <p>multi line text can put here<br>
+                        it is not only for us. lorem ipsum dollor amore. or other text here<br>
+                        i am here
+                    </p>
+                    <ul>
+                        <li>test list item 1</li>
+                        <li>test list item 2</li>
+                        <li>test list item 3</li>
+                        <li>test list item 4</li>
+                    </ul>
+                    <p>another paragraph can set here<br>
+                        it is multiline text<br>
+                        no problem.
+                    </p>
+                </div>
+            </li>
+            <li class="collapsed">
+                <div>
+                    <span class="status-icon"></span>
+                    <h4>section #2 title</h4>
+                </div>
+                <div>
+                    <p>multi line text can put here<br>
+                        it is not only for us. lorem ipsum dollor amore. or other text here<br>
+                        i am here
+                    </p>
+                    <p>another paragraph can set here<br>
+                        it is multiline text<br>
+                        no problem.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
 	<script>
-        var a = new JSAccordion( '#test1' );
-        a.test('red');
-
-        var b = new JSAccordion( document.getElementById('test2') );
-        b.test('green');
-
-        var c = JSAccordion( '#test3' ).test('blue');
-
-        JSAccordion( document.getElementById('test4') ).test('cyan');
-
+        var acc1 = JSAccordion('#first-accordion');
+        var acc2 = new JSAccordion('#second-accordion');
+        var acc3 = JSAccordion(document.querySelector('#third-accordion'));
 	</script>
 </body>
 </html>

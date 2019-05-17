@@ -1,0 +1,23 @@
+.jsac-container {
+    border: solid 1px silver;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.jsac-container, .jsac-list, .jsac-list-item {
+    padding: 5px;
+    margin: 5px;
+}
+
+.jsac-list {
+    background-color: #eeeeee;
+}
+
+.jsac-list-item {
+    background-color: #e8e8e8;
+}
+
+.jsac-header {
+    background-color: #dddddd;
+    cursor: pointer;
+}
