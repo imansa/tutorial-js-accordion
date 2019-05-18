@@ -56,10 +56,10 @@ function JSAccordion(elementOrSelector) {
 
                 headerHx = header.querySelector('h3,h4,h5,h6');
                 headerHx.classList.add('jsac-title');
-
-
             }
         }
+        
+        return this;
     };
 
     //  start construction operations
