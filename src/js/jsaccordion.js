@@ -29,12 +29,12 @@ function JSAccordion(elementOrSelector) {
                 header.onclick = (function() {
                     var listItem = listItems[j], bodyElement = body, that = this, target = [i,j];
                     return function (event) {
-                        if(listItem.classList.contains('expanded')) {
-                            listItem.classList.remove('expanded');
-                            listItem.classList.add('collapsed');
-                        } else {
+                        if(listItem.classList.contains('collapsed')) {
                             listItem.classList.add('expanded');
                             listItem.classList.remove('collapsed');
+                        } else {
+                            listItem.classList.remove('expanded');
+                            listItem.classList.add('collapsed');
                         }
 
                         if(that._clickTimeout[target[0]+'-'+[target[1]]] != undefined)
